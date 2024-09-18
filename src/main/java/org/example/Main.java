@@ -21,14 +21,24 @@ public class Main {
     }
 
     public static boolean hasTeen(int firstAge, int secondAge, int thirdAge) {
-        return (firstAge > 13 && firstAge <= 19) || (secondAge > 13 && secondAge <= 19) || (thirdAge > 13 && thirdAge <= 19);
+        if ((firstAge > 13 && firstAge <= 19) || (secondAge > 13 && secondAge <= 19) || (thirdAge > 13 && thirdAge <= 19)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    public static boolean isCatPlaying(boolean isSummer, int sicaklik) {
-        int dusukSicaklik = 25;
-        int yuksekSicaklik = isSummer ? 45 : 35;
 
-        return sicaklik<yuksekSicaklik && sicaklik>dusukSicaklik;
+
+    public static boolean isCatPlaying(boolean isSummer, int temp) {
+        int lowestTemp = 25;
+        int highestTemp = isSummer ? 45 : 36;
+
+        if(temp<highestTemp && temp>lowestTemp) {
+            return true;
+        } else {
+            return  false;
+        }
     }
 
     public static double area(double width, double heigth) {
